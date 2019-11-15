@@ -15,7 +15,7 @@ pipeline {
 		     steps {
 		           sh "./mvnw test -Dmaven.test.skip=true"
                   publishHTML(target: [
-                  	reportDir: 'build/reports/jacoco/test/html',
+                  	reportDir: 'target/reports/jacoco/test/html',
                     reportFiles: 'index.html',
                     reportName: "JaCoCo Report"
                   ])
